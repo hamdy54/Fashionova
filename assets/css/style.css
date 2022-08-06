@@ -1,0 +1,680 @@
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* Variables */
+:root {
+  --blue-color: #498ef4;
+  --text-color: #6d7d8b;
+  --light-background-color: #fbf8f3;
+  --dark-color: #2d2d2d;
+  --heading-fs: 3rem;
+  --heading-mb: 2rem;
+}
+
+/* Global Rules */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  text-decoration: none !important;
+  list-style: none !important;
+}
+
+ul {
+  margin-bottom: 0 !important; /* to cancel bottom margin of bootstrap */
+  padding-left: 0 !important; /* to cancel left paddin of bootstrap */
+}
+
+section {
+  padding: 4rem 0; /* to add a padding to any section in html */
+}
+
+/* if i want to make a container for me not depending on bootstrap code */
+.my_container {
+  width: 1400px;
+  margin: 0 auto;
+}
+/* this code will execute from width 0 to width 1400px only */
+@media (max-width: 1400px) {
+  .my_container {
+    width: 100%;
+    padding: 0 16px;
+  }
+}
+/*=============================================== home page ===============================================*/
+/*=============================
+        start navbar
+===============================*/
+nav {
+  padding: 1rem 0;
+  position: relative;
+}
+
+nav .my_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav h1.logo {
+  margin: 0 !important;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+nav h1.logo a {
+  color: var(--blue-color) !important;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+nav ul li a {
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+nav ul li a.active {
+  font-weight: 600;
+}
+nav ul li a.active,
+nav ul li a:hover {
+  color: var(--blue-color);
+}
+
+nav ul li a.btn {
+  color: #fff;
+  background-color: var(--blue-color);
+  display: block;
+  padding: 0.8rem;
+  border-radius: 7px;
+  border: 2px solid transparent;
+  transition: 0.3s ease;
+}
+
+nav ul li a.btn:hover {
+  border-color: var(--blue-color);
+  background-color: transparent;
+  color: var(--blue-color);
+}
+
+nav ul li a.btn i {
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+nav ul #closeMenu {
+  display: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 2rem;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+nav #toggleMenu {
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  nav #toggleMenu {
+    display: block;
+  }
+  nav ul {
+    position: fixed;
+    flex-direction: column;
+    top: 0;
+    right: -150%;
+    width: 250px;
+    height: 100vh;
+    background-color: var(--blue-color);
+    justify-content: center;
+    transition: 0.5s ease;
+    gap: 1rem;
+    z-index: 5;
+  }
+  nav ul.active {
+    right: 0;
+  }
+  nav ul li {
+    width: 80%;
+    text-align: center;
+  }
+  nav ul li a {
+    display: block;
+    color: #fff;
+    padding: 1rem 0;
+    border-radius: 10px;
+    transition: 0.3s ease;
+  }
+  nav ul li a.active,
+  nav ul li a:hover {
+    background-color: #fff;
+    color: var(--text-color);
+  }
+  nav ul li a.btn {
+    margin: 0 auto;
+    border-color: #fff;
+  }
+  nav ul li a.btn:hover {
+    background-color: #fff;
+    color: var(--blue-color);
+  }
+  nav ul #closeMenu {
+    display: block;
+  }
+}
+
+/*=============================
+        end navbar
+===============================*/
+
+/*=============================
+      start carousel section
+===============================*/
+.carousel {
+  height: 700px;
+}
+
+.carousel:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.carousel .carousel-inner {
+  height: 100%;
+}
+
+.carousel .carousel-inner .carousel-item {
+  height: 100%;
+}
+
+.carousel .carousel-inner .carousel-item img {
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.carousel .carousel-inner .carousel-item .carousel-caption {
+  z-index: 1;
+  bottom: 50%;
+  transform: translateY(50%);
+}
+
+.carousel .carousel-inner .carousel-item .carousel-caption h5 {
+  color: var(--blue-color);
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.carousel .carousel-inner .carousel-item .carousel-caption a.btn {
+  background-color: var(--blue-color);
+  color: #fff;
+  margin: 0 auto;
+  border: 2px solid transparent;
+}
+.carousel .carousel-inner .carousel-item .carousel-caption a.btn:hover {
+  color: var(--blue-color);
+  border-color: var(--blue-color);
+  background-color: transparent;
+}
+
+/*=============================
+      end carousel section
+===============================*/
+
+/*=============================
+      start why us section
+===============================*/
+.why_us_section {
+  background-color: var(--light-background-color);
+}
+
+.why_us_section h3 {
+  font-size: var(--heading-fs);
+  margin-bottom: var(--heading-mb);
+  color: var(--blue-color);
+  font-weight: 600;
+}
+
+.why_us_section .box_container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.why_us_section .box_container .box {
+  padding: 1rem;
+  flex: 1 1 300px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.why_us_section .box_container .box .icon {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--blue-color);
+}
+
+.why_us_section .box_container .box h4 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.why_us_section .box_container .box p {
+  color: var(--text-color);
+  font-size: 0.95rem;
+}
+
+/*=============================
+      end why us section
+===============================*/
+
+/*=============================
+  start customer review section
+===============================*/
+.customer_review_section h3 {
+  font-size: var(--heading-fs);
+  margin-bottom: var(--heading-mb);
+  color: var(--blue-color);
+  font-weight: 600;
+}
+
+.customer_review_section .box_container {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.customer_review_section .box_container .box {
+  padding: 1rem 2rem;
+  flex: 1 1 300px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.customer_review_section .box_container .box .icon {
+  font-size: 3.5rem;
+  text-align: center;
+  color: var(--blue-color);
+}
+
+.customer_review_section .box_container .box p.comment {
+  color: var(--text-color);
+  font-size: 0.95rem;
+}
+
+.customer_review_section .box_container .box .star_container i {
+  color: var(--blue-color);
+}
+
+.customer_review_section .box_container .box .user_info {
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 1rem;
+}
+
+.customer_review_section .box_container .box .user_info img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.customer_review_section .box_container .box .user_info .name {
+  margin-bottom: 0;
+  font-size: 1rem;
+  color: var(--blue-color);
+  font-weight: 600;
+}
+
+/*=============================
+  end customer review section
+===============================*/
+
+/*=============================
+  start leave a comment section
+===============================*/
+.leave_comment_section {
+  background-color: var(--light-background-color);
+}
+
+.leave_comment_section h3 {
+  font-size: var(--heading-fs);
+  margin-bottom: var(--heading-mb);
+  color: var(--blue-color);
+  font-weight: 600;
+}
+
+.leave_comment_section form {
+  width: 100%;
+  max-width: 500px;
+  background-color: #fff;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.leave_comment_section form .input_field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.leave_comment_section form .input_field label {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.leave_comment_section form .input_field input,
+.leave_comment_section form .input_field textarea {
+  outline: none;
+  color: #000;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 0.5rem;
+}
+
+.leave_comment_section form .input_field textarea {
+  min-height: 110px;
+  max-height: 200px;
+  resize: vertical;
+}
+
+.leave_comment_section form .input_field input:focus,
+.leave_comment_section form .input_field textarea:focus {
+  border-color: var(--blue-color);
+}
+
+.leave_comment_section form .input_field input::placeholder,
+.leave_comment_section form .input_field textarea::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+  font-weight: 500;
+}
+
+.leave_comment_section form .btn {
+  width: max-content;
+  align-self: center;
+  border: 2px solid transparent;
+  background-color: var(--blue-color);
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 0.5rem 1.5rem;
+}
+
+.leave_comment_section form .btn:hover {
+  background-color: transparent;
+  color: var(--blue-color);
+  border-color: var(--blue-color);
+}
+
+/*=============================
+  end leave a comment section
+===============================*/
+
+/*=============================
+        start footer
+===============================*/
+footer {
+  padding: 1rem 0;
+  position: relative;
+  background-color: var(--dark-color);
+}
+
+footer .my_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+footer .logo {
+  font-size: 1rem;
+  color: var(--blue-color);
+  font-weight: 500;
+}
+
+footer ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+footer ul li a {
+  font-size: 0.8rem;
+  color: #fff;
+}
+
+footer ul li a.icon {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  font-size: 1rem;
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+footer ul li a.icon.facebook:hover {
+  background-color: #1877F2;
+}
+
+footer ul li a.icon.instagram:hover {
+  background-color: #E4405F;
+}
+
+footer ul li a.icon.youtube:hover {
+  background-color: #CD201F;
+}
+
+footer .copy_right {
+  color: #fff;
+  text-align: center;
+  padding-top: 0.3rem;
+  font-size: 0.8rem;
+}
+
+/*=============================
+        end footer
+===============================*/
+
+/*=============================================== products page ===============================================*/
+
+.products_section h3 {
+  font-size: var(--heading-fs);
+  color: var(--blue-color);
+  margin-bottom: var(--heading-mb);
+  font-weight: 600;
+}
+
+.products_section .products_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  justify-content: center;
+  gap: 2rem;
+}
+
+.products_section .products_container .product_box {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.products_section .products_container .product_box .img_box {
+  width: 100%;
+  height: 400px;
+}
+
+.products_section .products_container .product_box .img_box img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.products_section .products_container .product_box .product_details {
+  padding: 1rem;
+}
+
+.products_section .products_container .product_box .product_details .title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.products_section .products_container .product_box .product_details .price {
+  font-size: 1.2rem;
+  color: var(--blue-color);
+  font-weight: 600;
+}
+
+.products_section .products_container .product_box .product_details .buy_btn {
+  display: block;
+  background-color: var(--blue-color);
+  color: #fff;
+  border-radius: 5px;
+  padding: 0.5rem 0;
+  font-size: 1.2rem;
+  text-align: center;
+  width: 100px;
+  margin: 0 auto;
+  border: 2px solid transparent;
+  transition: 0.3s ease;
+}
+
+.products_section .products_container .product_box .product_details .buy_btn:hover {
+  background-color: transparent;
+  border-color: var(--blue-color);
+  color: var(--blue-color);
+}
+
+
+/*=============================================== register / login page ===============================================*/
+
+.register-login_section {
+  /* calc means that i want to make a calculation */
+  min-height: calc(100vh - 177px); /* height will start with 100vh (100% height of the viewport - 177px (navbar + footer) height) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* i select form in general because i want to make changes in two forms */
+.register-login_section form {
+  max-width: 500px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 3rem 2rem;
+  display: block;
+}
+
+/* when form take a class hide will take this style */
+.register-login_section form.hide {
+  display: none;
+}
+
+.register-login_section form h3 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.register-login_section form .form_row,
+.register-login_section form .radio_container {
+  display: flex;
+  gap: 1rem;
+}
+
+.register-login_section form .radio_container {
+  flex-wrap: wrap;
+}
+
+.register-login_section form .input_field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  gap: 0.2rem;
+}
+
+.register-login_section form .input_field label {
+  font-size: 0.9rem;
+}
+
+.register-login_section form .input_field input {
+  width: 100%;
+  outline: none;
+  padding: 0.3rem 0.5rem;
+  border-radius: 5px;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.register-login_section form .input_field input:focus {
+  border-color: var(--blue-color);
+}
+
+.register-login_section form .btn {
+  background-color: var(--blue-color);
+  color: #fff;
+  border: 2px solid transparent;
+  transition: 0.3s ease;
+  margin: 0 auto;
+  display: block;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.register-login_section form .btn:hover {
+  background-color: transparent;
+  border-color: var(--blue-color);
+  coloR: var(--blue-color);
+}
+
+.register-login_section form p {
+  font-size: 0.95rem;
+}
+
+@media (max-width: 576px) {
+  .register-login_section form .form_row {
+    flex-direction: column;
+  }
+  .register-login_section form .form_row .input_field {
+    margin-bottom: 0;
+  }
+  .register-login_section form .form_row .input_field:last-child {
+    margin-bottom: 1rem;
+  }
+}

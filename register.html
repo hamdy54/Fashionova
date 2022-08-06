@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fashionova | Register</title>
+    <!-- fontawesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- normalize css -->
+    <link rel="stylesheet" href="assets/css/normalize.css" />
+    <!-- style css -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <!--=================== start navbar ===================-->
+    <nav>
+      <div class="my_container">
+        <h1 class="logo"><a href="index.html">Fashionova</a></h1>
+        <ul id="menu">
+          <div id="closeMenu"><i class="fa-solid fa-xmark"></i></div>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="register.html" class="btn">Sign up</a></li>
+        </ul>
+        <div id="toggleMenu"><i class="fa-solid fa-bars"></i></div>
+      </div>
+    </nav>
+    <!--=================== end navbar ===================-->
+
+    <!--=================== start register / login section ===================-->
+
+    <section class="register-login_section">
+      <div class="my_container">
+        <!-- signup form -->
+        <form action="#" method="post" class="signup_form">
+          <h3>Sign up</h3>
+          <div class="form_row">
+            <div class="input_field">
+              <label for="firstName">First Name</label>
+              <input type="text" name="firstName" id="firstName">
+            </div>
+            <div class="input_field">
+              <label for="lastName">Last Name</label>
+              <input type="text" name="lastName" id="lastName">
+            </div>
+          </div>
+          <div class="input_field">
+            <label for="signupEmail">Email</label>
+            <input type="email" name="signupEmail" id="signupEmail">
+          </div>
+          <div class="input_field">
+            <label for="signupPassword">Password</label>
+            <input type="password" name="signupPassword" id="signupPassword">
+          </div>
+          <div class="radio_container">
+            <!-- using radio input, you have to unfiy name to choose one of them only -->
+            <p>Gender:</p>
+            <div class="radio_field">
+              <input type="radio" name="gender" id="male" value="male">
+              <label for="male">Male</label>
+            </div>
+            <div class="radio_field">
+              <input type="radio" name="gender" id="female" value="female">
+              <label for="female">Female</label>
+            </div>
+          </div>
+          <button type="submit" name="signupSubmit" class="btn">Sign up</button>
+          <p>By signing up, you agree to our <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>.</p>
+          <p>Already a member? <a href="#" id="signInBtn">Sign in</a></p>
+        </form>
+        <!-- signin form -->
+        <form action="#" method="post" class="signin_form hide">
+          <h3>Sign up</h3>
+          <div class="input_field">
+            <label for="signinEmail">Email</label>
+            <input type="email" name="signinEmail" id="signinEmail">
+          </div>
+          <div class="input_field">
+            <label for="signinPassword">Password</label>
+            <input type="password" name="signinPassword" id="signinPassword">
+          </div>
+          <button type="submit" name="signinSubmit" class="btn">Sign in</button>
+          <p>Not a member? <a href="#" id="signUpBtn">Sign up</a></p>
+        </form>
+      </div>
+    </section>
+
+    <!--=================== end register / login section ===================-->
+
+    <!--=================== start footer ===================-->
+    <footer>
+      <div class="my_container">
+        <a href="index.html" class="logo">Fashionova</a>
+        <ul>
+          <li><a href="#" class="icon facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+          <li><a href="#" class="icon instagram"><i class="fa-brands fa-instagram"></i></a></li>
+          <li><a href="#" class="icon youtube"><i class="fa-brands fa-youtube"></i></a></li>
+          <li><a href="#">Privacy and Policy</a></li>
+          <li><a href="#">Terms Of Use</a></li>
+        </ul>
+      </div>
+      <div class="copy_right">copyright &copy; 2022</div>
+    </footer>
+    <!--=================== end footer ===================-->
+    <!--=================== javascript ===================-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
